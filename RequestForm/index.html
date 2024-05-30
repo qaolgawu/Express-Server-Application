@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit your application</title>
+    <link rel="stylesheet" href="./css/nullStyle.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <div class="users hidden">
+        <div class="container"></div>
+    </div>
+    
+    
+    <main class="main">
+        <section class="application">
+            <form class="form">
+                <h2 class="title">Registry</h2>
+                <label for="">Name</label>
+                <input autocomplete="off" pattern="^[\w+@+\.]+$"  placeholder="Enter your name" name="name" class="form__inp" type="text" data-error-pattern="Latin characters and numbers are allowed" required>
+                <p class="error-inp"></p>
+                <label for="">Login</label>
+                <input autocomplete="off" pattern="^[\w+@+\.]+$"  placeholder="Enter your login" name="login" class="form__inp" type="text" data-error-pattern="Latin characters and numbers are allowed" required>
+                <p class="error-inp"></p>
+                <label for="">Password</label>
+                <input autocomplete="off" pattern="^[\w+]+$" placeholder="Enter your password" minlength="6" name="password" class="form__inp" type="text" data-error-pattern="Doesn't match the password" data-error-length="Minimum 6 characters" required>
+                <p class="error-inp"></p>
+                <p class="error hidden">An application with this number has already been registered</p>
+                <button class="form__submit" disabled>Submit</button>
+                <p class="serverMessage"></p>
+            </form>
+        </section>
+        <button class="form__submit fixedBtn">Get All Users</button>
+    </main>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
